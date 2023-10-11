@@ -29,7 +29,7 @@ The project comes with both Maven and Gradle build scripts. To run the tests wit
 
 For GRADLE, pen a command window and run:
 
-  gradlew test 
+  gradle test 
 
 ## Viewing the reports
 
