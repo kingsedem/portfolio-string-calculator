@@ -1,25 +1,30 @@
-# Serenity JUnit Starter project
+# String Calculator Kata
 
-Get started quickly with Serenity BDD and JUnit 5 with this simple starter project. 
+The aim of this Kata is to implement a simple integer calculator. 
+The calculator takes a string of space-separated numbers and operators (like "1 + 2 + 3" or "10 + 4 - 5") and returns the result of the calculation.
 
-## Get the code
+It should resolve the following sums:
 
-Click on the [Use This Template button](https://github.com/serenity-bdd/serenity-junit-starter/generate) to create a new project in your own Github account. 
-
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+- "1"
+- "1 + 1"
+- "1 + 2 + 3"
+- "10 - 6"
+- "10 + 5 - 6"
+- "10 * 5"
+If an operator isn't known, an exception should be thrown.
 
 ## Running the tests under Maven
 
-The template project comes with both Maven and Gradle build scripts. To run the tests with Maven, open a command window and run:
+The project comes with both Maven and Gradle build scripts. To run the tests with Maven, open a command window and run:
 
-  ./mvnw clean verify
+  mvn clean verify
 
 ## Use Gradle
 
 For GRADLE, pen a command window and run:
 
-  ./gradlew test 
+  gradlew test 
 
 ## Viewing the reports
 
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory.
