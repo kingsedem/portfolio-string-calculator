@@ -26,12 +26,9 @@ The project comes with both Maven and Gradle build scripts. To run the tests wit
 
 For GRADLE, pen a command window and run:
 
-  gradlew test 
+  gradle test 
 
 ## Viewing the reports
 
 Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory.
-=======
-
-If an operator isn't known, an exception should be thrown.
 
