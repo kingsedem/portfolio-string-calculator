@@ -1,7 +1,8 @@
 # String Calculator Kata
 
 Welcome to the Java String Calculator Kata!
-The aim of this Kata is to implement a simple integer calculator. 
+
+The aim of this Kata is to implement a simple integer calculator.
 The calculator takes a string of space-separated numbers and operators 
 (like "1 + 2 + 3" or "10 + 4 - 5") and returns the result of the calculation.
 
