@@ -20,7 +20,7 @@ public class WhenCalculatingResults {
 
    @DisplayName("The calculator should return zero for empty string")
     @Test
-    void shouldReturnZeroForEmptyStrings() throws illegalArgumentException {
+    void shouldReturnZeroForEmptyStrings() throws IllegalArgumentException {
        double result = calculator.calculate("");
        assertThat(result).isEqualTo(0.0);
     }
@@ -35,7 +35,7 @@ public class WhenCalculatingResults {
             delimiterString = "="
     )
 
-    void shouldReturnTheNumberForASingleNumber(String expression, double expected) throws illegalArgumentException {
+    void shouldReturnTheNumberForASingleNumber(String expression, double expected) throws IllegalArgumentException {
         double result = calculator.calculate(expression);
         assertThat(result).isEqualTo(expected);
     }
@@ -60,14 +60,14 @@ public class WhenCalculatingResults {
             delimiterString = "="
     )
 
-    void shouldReturnTheCalculatedResultsForTwoNumbers(String expression, double expected) throws illegalArgumentException {
+    void shouldReturnTheCalculatedResultsForTwoNumbers(String expression, double expected) throws IllegalArgumentException {
         double result = calculator.calculate(expression);
         assertThat(result).isEqualTo(expected);
     }
 
 
     @ParameterizedTest
-    @DisplayName("The calculator should return the calculated results for two numbers")
+    @DisplayName("The calculator should return the calculated results for three numbers")
     @CsvSource(
             value = {
                     "1 + 2 + 3 = 6",
@@ -76,7 +76,7 @@ public class WhenCalculatingResults {
             delimiterString = "="
     )
 
-    void shouldReturnTheCalculatedResultsForThreeNumbers(String expression, double expected) throws illegalArgumentException {
+    void shouldReturnTheCalculatedResultsForThreeNumbers(String expression, double expected) throws IllegalArgumentException {
         double result = calculator.calculate(expression);
         assertThat(result).isEqualTo(expected);
     }

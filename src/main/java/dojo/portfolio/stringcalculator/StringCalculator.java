@@ -10,7 +10,7 @@ public class StringCalculator {
      * Calculate the result of the given arithmetic calculation
      * For example. "1 + 2" should return 3.0
      */
-    public double calculate(String value) throws illegalArgumentException {
+    public double calculate(String value) throws IllegalArgumentException {
         List<String> tokens =  Arrays.stream(value.split(" "))
                 .filter(token ->!token.isEmpty())
                 .map(token -> token.trim())
@@ -27,7 +27,7 @@ public class StringCalculator {
 
         // 2 tokens left (syntax error because it will be 1 +)
         if(tokens.size() == 2){
-            throw new illegalArgumentException("Invalid expression: " + value);
+            throw new IllegalArgumentException("Invalid expression: " + value);
         }
 
         //3 or more tokens left -> expression to be evaluated
@@ -38,7 +38,7 @@ public class StringCalculator {
     }
 
 
-    private String evaluateExpression(String left, String operator, String right) throws illegalArgumentException {
+    private String evaluateExpression(String left, String operator, String right) throws IllegalArgumentException {
             double leftValue  = Double.parseDouble(left);
             double rightValue = Double.parseDouble(right);
 
@@ -53,7 +53,7 @@ public class StringCalculator {
                     return Double.toString(leftValue / rightValue);
 
                 default:
-                    throw new illegalArgumentException("Unknown Operator: " + operator);
+                    throw new IllegalArgumentException("Unknown Operator: " + operator);
             }
         }
     }
